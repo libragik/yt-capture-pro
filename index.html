@@ -161,7 +161,7 @@ h1{animation-delay:.2s}
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-badge"><span></span>Chrome Extension · Free + Pro</div>
-    <h1>Screenshot any<br><em>YouTube video</em><br>instantly</h1>
+    <h1>Capture On-screeen video Frame for<br><em>Notes</em><br>& Reference</h1>
     <p class="hero-sub">Press one key. Get a perfect PNG saved to your device. Crop regions, burn subtitles, sync to Notion — all powered by standard browser APIs.</p>
     <div class="hero-btns">
       <a href="https://buy.polar.sh/polar_cl_fxCZwlMf32awuDSDsyaqPe7qlmwOWJZRgUGLF32q6Hw" class="btn-primary">Get Pro — from $1.50/mo</a>
@@ -201,7 +201,7 @@ h1{animation-delay:.2s}
 <span class="kw">const</span> canvas = document.<span class="fn">createElement</span>(<span class="str">'canvas'</span>);
 <span class="kw">const</span> ctx = canvas.<span class="fn">getContext</span>(<span class="str">'2d'</span>);
 
-canvas.width  = video.videoWidth;    <span class="comment">// native video resolution</span>
+canvas.width  = video.videoWidth;    <span class="comment">// screen-accurate image capture</span>
 canvas.height = video.videoHeight;
 ctx.<span class="fn">drawImage</span>(video, 0, 0);          <span class="comment">// copies the rendered frame</span>
 
@@ -210,7 +210,7 @@ chrome.downloads.<span class="fn">download</span>({ url: dataUrl, filename: <spa
     </div>
 
     <div class="highlight" style="margin-top:32px">
-      <p><strong>No YouTube API calls. No CDN requests. No stream access.</strong> The extension reads only what the browser has already downloaded and rendered to the screen. It is functionally identical to a user taking a screenshot with their operating system's built-in tool — but with smart metadata and optional enhancements.</p>
+      <p><strong>No YouTube API calls. No CDN requests. No stream access.</strong> The extension captures only pixels currently visible on screen and rendered to the screen. It is functionally identical to a user taking a screenshot with their operating system's built-in tool — but with smart metadata and optional enhancements.</p>
     </div>
   </div>
 </section>
@@ -225,7 +225,7 @@ chrome.downloads.<span class="fn">download</span>({ url: dataUrl, filename: <spa
       <div class="feat-card">
         <div class="feat-icon">⚡</div>
         <h3>One-key capture</h3>
-        <p>Press Alt+S on any YouTube video to capture the full frame instantly at native video resolution.</p>
+        <p>Press Alt+S on any YouTube video to capture the full frame instantly at native resolution.</p>
         <span class="feat-badge badge-free">Free</span>
       </div>
       <div class="feat-card">
@@ -297,8 +297,8 @@ chrome.downloads.<span class="fn">download</span>({ url: dataUrl, filename: <spa
       <div class="tech-card">
         <h3>✗ &nbsp;What the extension NEVER DOES</h3>
         <ul class="check-list cross-list">
-          <li>Access YouTube video stream URLs, CDN endpoints, or blob:// URLs</li>
-          <li>Download video or audio data in any format</li>
+          <li>Does not Access YouTube video stream URLs, CDN endpoints, or blob:// URLs</li>
+          <li> Does Not Download video or audio data in any format</li>
           <li>Use any unofficial YouTube API or private endpoint</li>
           <li>Work if the video element is not visible or loaded</li>
           <li>Bypass Widevine DRM — DRM-protected content returns a black canvas (browser-enforced)</li>
